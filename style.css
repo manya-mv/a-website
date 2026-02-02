@@ -100,9 +100,15 @@ header {
 
 /* LOGO */
 .logo {
-    width: 32px;
-    height: 32px;
+
+    opacity: 0.9;
+    
+    width: 24px;
+    height: auto;
     object-fit: contain;
+
+
+
 }
 
 /* TEXT STYLE */
@@ -208,4 +214,47 @@ header {
     color: #d8b4ff;
     font-weight: 500;
 }
+
+/* KNOW MORE BUTTON */
+.know-more-btn {
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: 2px solid #c77dff;
+    border-radius: 30px;
+    background: transparent;
+    color: #c77dff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.know-more-btn:hover {
+    background: rgba(199, 125, 255, 0.2);
+    color: white;
+}
+
+/* KNOW MORE SECTION */
+.know-more-section {
+    padding: 80px 12%;
+    text-align: center;
+    background: #12001d;
+}
+
+.know-more-section h2 {
+    font-size: 32px;
+    color: #c77dff;
+    margin-bottom: 20px;
+}
+
+.know-more-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ddd;
+    max-width: 800px;
+    margin: auto;
+}
+
+
 
