@@ -282,6 +282,7 @@ header {
     color: white;
     text-shadow: 0 0 20px rgba(199,125,255,0.6),
                  0 0 40px rgba(123,44,191,0.6);
+    letter-spacing: 4px;
 }
 
 /* CONSORTIUM */
