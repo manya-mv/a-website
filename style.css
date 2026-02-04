@@ -1,4 +1,5 @@
 
+
 /* GOOGLE TECH FONT */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
@@ -1141,3 +1142,158 @@ header {
       justify-content: center;
     }
   }
+
+
+/* ================= TEAM PAGE ================= */
+
+.team-page {
+  padding: 120px 8%;
+  text-align: center;
+  background: #0b0616;
+}
+
+.team-page h1 {
+  
+font-size: 3rem;
+  color: #ad92d9;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+}
+
+.team-page p {
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+/* TEAM GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1100px;
+  margin: auto;
+  justify-items: center;
+}
+
+/* FLIP CARD WRAPPER */
+.team-card {
+  width: 260px;
+  height: 360px;
+  perspective: 1200px;
+}
+
+/* FLIP INNER */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.team-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid #9b5cff;
+  background: rgba(20,10,40,0.85);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(155,92,255,0.4);
+}
+
+/* FRONT IMAGE */
+.flip-card-front img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* NAME & DESIGNATION */
+.flip-card-front h3 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+}
+
+.flip-card-front p {
+  color: #c77dff;
+  font-size: 0.95rem;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+  transform: rotateY(180deg);
+  gap: 25px;
+  font-size: 2.4rem;
+}
+
+/* Social icons */
+.flip-card-back a {
+  color: white;
+  transition: 0.3s;
+}
+
+.flip-card-back a:hover {
+  color: #c77dff;
+}
+
+/* ================= SHOW MORE ANIMATION ================= */
+
+.extra-member {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.extra-member.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  max-height: 400px;
+}
+
+/* SHOW BUTTON */
+.show-btn {
+  margin-top: 40px;
+  padding: 12px 32px;
+  background: #9b5cff;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.show-btn:hover {
+  background: #c77dff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
