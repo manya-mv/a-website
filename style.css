@@ -1,3 +1,4 @@
+
 /* GOOGLE TECH FONT */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
@@ -28,6 +29,8 @@ header {
     z-index: 9999;
     background: transparent; /* keep pill floating look */
 }
+
+
 
 /* PILL NAVBAR */
 .pill-navbar {
@@ -208,6 +211,121 @@ header {
 .pill-navbar.shrink .nav-right span {
     font-size: 12px;
 }
+/* ================= HAMBURGER ICON ================= */
+.hamburger {
+    display: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+}
+
+/* ================= MOBILE NAV MENU ================= */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide normal menu */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 10px;
+        background: #1a1025;
+        padding: 15px;
+        border-radius: 20px;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 200px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        z-index: 99999;
+    }
+
+    /* Show menu when clicked */
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /* Make dropdown normal on mobile */
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdown-menu li a {
+        font-size: 13px;
+        padding-left: 10px;
+    }
+
+    /* Pill navbar layout on phone */
+    .pill-navbar {
+        justify-content: space-between;
+        padding: 10px 15px;
+        width: 95%;
+    }
+
+    /* Move logo center-right */
+    .nav-right {
+        margin-left: auto;
+    }
+
+    /* Stop typewriter overflow on phone */
+    .typewriter {
+        max-width: 140px;
+        font-size: 11px;
+    }
+}
+/* ================= MOBILE CENTER LOGO + TITLE ================= */
+@media (max-width: 768px) {
+
+    /* Pill navbar becomes 3-part layout */
+    .pill-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Hamburger stays LEFT */
+    .hamburger {
+        position: absolute;
+        left: 15px;
+    }
+
+    /* Center logo + title */
+    .nav-right {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+  .typewriter {
+    animation: none;
+    border-right: none;
+  }
+}
+}
+@media (max-width: 768px) {
+
+  .nav-right span {
+    font-size: 10px;     /* smaller text */
+    line-height: 1.2;
+    white-space: normal; /* allow wrapping */
+    max-width: 180px;    /* prevent overflow */
+    text-align: center;
+  }
+}
+
 
 /* HERO SECTION */
 .hero {
