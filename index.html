@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,16 @@
 
 <body>
 
-    <!-- HEADER -->
-   <header>
+  <header>
   <nav class="pill-navbar">
 
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
     <!-- LEFT MENU -->
-    <ul class="nav-menu">
+    <ul class="nav-menu" id="navMenu">
       <li><a href="#home">Home</a></li>
 
       <li class="dropdown">
@@ -35,13 +40,29 @@
     </ul>
 
     <!-- RIGHT LOGO + NAME -->
-    <div class="nav-right">
-      <img src="logo.png"  class = "logo" alt="Logo">
+    <!-- <div class="nav-right">
+      <img src="logo.png" class="logo" alt="Logo">
       <span class="typewriter">Cybersecurity OWASP Consortium</span>
-    </div>
+    </div> -->
+    <div class="nav-right">
+  <img src="logo.png" class="logo" alt="Logo">
+  <span class="typewriter nav-title">Cybersecurity OWASP Consortium</span>
+</div>
+
 
   </nav>
 </header>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+</script>
+
 
 
 
