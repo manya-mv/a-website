@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Our Team | Cybersecurity OWASP Consortium</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -16,30 +16,49 @@
 <header>
   <nav class="pill-navbar">
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
 
+    <!-- LEFT MENU -->
     <ul class="nav-menu" id="navMenu">
       <li><a href="index.html">Home</a></li>
 
       <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html#past-events">Past Events</a></li>
-          <li><a href="index.html#upcoming-events">Upcoming Events</a></li>
-        </ul>
-      </li>
+  <a href="#" id="eventsToggle">Events ▾</a>
 
+  <ul class="dropdown-menu" id="eventsMenu">
+    <li><a href="pasteve.html">Past Events</a></li>
+    <li><a href="index.html#upcoming-events">Upcoming Events</a></li>
+  </ul>
+</li>
+
+
+     
       <li><a href="index.html#contact">Contact</a></li>
+
       <li><a href="team.html">Team</a></li>
     </ul>
 
+    <!-- RIGHT LOGO + NAME -->
+    <!-- <div class="nav-right">
+      <img src="logo.png" class="logo" alt="Logo">
+      <span class="typewriter">Cybersecurity OWASP Consortium</span>
+    </div> -->
     <div class="nav-right">
-      <img src="logo.png" class="logo">
-      <span class="nav-title">Cybersecurity OWASP Consortium</span>
-    </div>
+  <img src="logo.png" class="logo" alt="Logo">
+  <span class="typewriter nav-title">Cybersecurity OWASP Consortium</span>
+</div>
+
 
   </nav>
 </header>
+
+
+
+
+
 
 
 <!-- TEAM SECTION -->
@@ -277,6 +296,22 @@ btn.addEventListener("click", () => {
   btn.innerText = expanded ? "Show Less" : "Show More";
 });
 </script>
+ <script>
+const eventsToggle = document.getElementById("eventsToggle");
+const eventsMenu = document.getElementById("eventsMenu");
 
+// Toggle dropdown on click
+eventsToggle.addEventListener("click", (e) => {
+  e.preventDefault();
+  eventsMenu.classList.toggle("show");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!eventsToggle.contains(e.target) && !eventsMenu.contains(e.target)) {
+    eventsMenu.classList.remove("show");
+  }
+});
+</script>
 </body>
 </html>
