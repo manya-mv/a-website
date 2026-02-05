@@ -25,15 +25,17 @@
 
     <!-- LEFT MENU -->
     <ul class="nav-menu" id="navMenu">
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
 
       <li class="dropdown">
-        <a href="#">Events ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="#past-events">Past Events</a></li>
-          <li><a href="#upcoming-events">Upcoming Events</a></li>
-        </ul>
-      </li>
+  <a href="#" id="eventsToggle">Events ▾</a>
+
+  <ul class="dropdown-menu" id="eventsMenu">
+    <li><a href="pasteve.html">Past Events</a></li>
+    <li><a href="upcomingeve.html">Upcoming Events</a></li>
+  </ul>
+</li>
+
 
      
       <li><a href="index.html#contact">Contact</a></li>
@@ -389,7 +391,24 @@ Promoting software security principles and practices through community engagemen
   nav.classList.toggle("shrink", window.scrollY > 50);
 });
   </script>
-  
+  <script>
+const eventsToggle = document.getElementById("eventsToggle");
+const eventsMenu = document.getElementById("eventsMenu");
+
+// Toggle dropdown on click
+eventsToggle.addEventListener("click", (e) => {
+  e.preventDefault();
+  eventsMenu.classList.toggle("show");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!eventsToggle.contains(e.target) && !eventsMenu.contains(e.target)) {
+    eventsMenu.classList.remove("show");
+  }
+});
+</script>
+
 
 
 
