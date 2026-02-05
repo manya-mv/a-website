@@ -469,7 +469,7 @@ header {
   font-weight: bold;
   margin-bottom: 40px;
   font-size: 3rem;
-  color: #c77dff;
+  color: #ad92d9;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -491,7 +491,7 @@ header {
   line-height: 1.7;
   color: #7e6363;
   
-  background: linear-gradient(90deg, #9b5cff, #3363ff);
+  background: linear-gradient(90deg, #9b5cff, #be33ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -501,9 +501,9 @@ header {
 .know-text-title {
   font-size: 1.7rem;
   line-height: 1.7;
-  color: #7e6363;
+  color: #c89fd3;
   text-decoration: bold;
-  background: linear-gradient(90deg, #6d2ed3, #5d285a);
+  background: linear-gradient(90deg, #9a91a8, #e4b2e2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -546,6 +546,7 @@ header {
     font-size: 3rem;
     color: #c77dff;
     font-family: 'Orbitron', sans-serif;
+    text-align: center;
 }
 
 /* TABS CONTAINER */
@@ -593,15 +594,7 @@ header {
   color: white;
 }
 
-/* Title */
-.events-title {
-  font-size: 3rem;
-  color: #ad92d9;
-  font-weight: bold;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
-  text-align: center;
-}
+
 
 /* Tabs */
 .tabs {
@@ -784,7 +777,8 @@ header {
 .mission-desc {
   
   background-size: 400% 400%;
-  
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   font-size: 2rem;
   color: #c77dff;
   font-family: sans-serif;
