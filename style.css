@@ -1243,16 +1243,18 @@ header {
 }
 
 .team-page h1 {
-  
-font-size: 3rem;
-  color: #ad92d9;
-  font-weight: bold;
+font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
+
 }
 
 .team-page p {
   color: #aaa;
+  font-size: 1.5em;
   margin-bottom: 50px;
 }
 
