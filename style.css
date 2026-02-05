@@ -67,6 +67,7 @@ header {
     padding: 6px 12px;
     border-radius: 20px;
     transition: 0.2s ease;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* HOVER EFFECT */
@@ -98,10 +99,30 @@ header {
     font-size: 13px;
 }
 
-/* SHOW DROPDOWN */
-.dropdown:hover .dropdown-menu {
-    display: block;
+
+
+/* CLICK DROPDOWN */
+.dropdown-menu {
+  display: none;
 }
+
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
 
 /* RIGHT SIDE LOGO + TEXT */
 .nav-right {
@@ -402,6 +423,8 @@ header {
     text-shadow: 0 0 20px rgba(199,125,255,0.6),
                  0 0 40px rgba(123,44,191,0.6);
     letter-spacing: 4px;
+    
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* CONSORTIUM */
@@ -442,11 +465,12 @@ header {
 
 /* Title same style as CYBERSECURITY */
 .know-title {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Rounded rectangular box */
@@ -517,10 +541,11 @@ header {
 
 /* EVENTS TITLE */
 .events-title {
-    font-size: 32px;
-    color: #913fd0;
     font-weight: bold;
     margin-bottom: 20px;
+    font-size: 3rem;
+    color: #c77dff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* TABS CONTAINER */
@@ -695,11 +720,13 @@ header {
 }
 
 .mission-title {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .mission-container {
@@ -755,22 +782,15 @@ header {
 }
 
 .mission-desc {
-  background: linear-gradient(270deg, #9b5cff, #00f5d4, #ff00ff);
+  
   background-size: 400% 400%;
   
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientMove 5s ease infinite;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  font-size: 1.5vw;
+  font-size: 2rem;
+  color: #c77dff;
+  font-family: sans-serif;
 }
 
-@keyframes gradientMove {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
+
 
 
 .vision-section {
@@ -789,16 +809,19 @@ header {
   text-shadow: 0 0 25px rgba(189, 97, 108, 0.7);
   position: relative;
   z-index: 3;
+  
     /* text-shadow: 0 0 10px #3d3747, 0 0 30px rgba(251, 249, 255, 0.7); */
 }
 
 .vision-subtitle
 {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .news-section {
@@ -808,11 +831,13 @@ header {
 }
 
 .news-title {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 4rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* News card */
@@ -877,11 +902,13 @@ header {
 }
 
 .faq-title {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 
 }
 
@@ -967,11 +994,13 @@ header {
 }
 
 .contact-left .contact-title {
-  font-size: 3rem;
-  color: #ad92d9;
+  
   font-weight: bold;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #9b5cff, 0 0 30px rgba(155, 92, 255, 0.7);
+  
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
 
   
 }
@@ -1363,4 +1392,175 @@ font-size: 3rem;
   .team-grid {
     grid-template-columns: 1fr;
   }
+}
+.past-events-section {
+  padding: 120px 8%;
+  background: #0b0616;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.past-events-title {
+  font-size: 3rem;
+  color: #c77dff;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 60px;
+}
+
+/* EVENT CARD */
+.past-event-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(20,10,40,0.85);
+  border: 2px solid #9b5cff;
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px rgba(155, 92, 255, 0.4);
+  transition: 0.4s ease;
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+/* Reveal Active */
+.past-event-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Glow */
+.past-event-card:hover {
+  box-shadow: 0 0 35px #9b5cff;
+  transform: translateY(-5px);
+}
+
+/* Reverse Layout */
+.past-event-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.event-image img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid #9b5cff;
+}
+
+/* TEXT AREA */
+.event-content {
+  text-align: left;
+  max-width: 600px;
+}
+
+.event-content h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #c77dff;
+  margin-bottom: 12px;
+}
+
+.event-desc {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* BUTTON */
+.event-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #9b5cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.event-btn:hover {
+  background: #c77dff;
+  box-shadow: 0 0 15px #c77dff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .past-event-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .past-event-card.reverse {
+    flex-direction: column;
+  }
+
+  .event-content {
+    text-align: center;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ================= MAILING LIST SECTION ================= */
+
+.mailing-section {
+  padding: 80px 8%;
+  background: #0b0616;
+  text-align: center;
+}
+
+/* Box with only top & bottom border */
+.mailing-box {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  border-top: 2px solid #9b5cff;
+  border-bottom: 2px solid #9b5cff;
+  color: white;
+}
+
+/* Title */
+.mailing-box h2 {
+  font-size: 2rem;
+  color: #c77dff;
+  margin-bottom: 12px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Description */
+.mailing-box p {
+  color: #aaa;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+}
+
+/* Button */
+.subscribe-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid #9b5cff;
+  color: #c77dff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* Hover Cyber Glow */
+.subscribe-btn:hover {
+  background: #9b5cff;
+  color: white;
+  box-shadow: 0 0 15px #9b5cff;
 }
